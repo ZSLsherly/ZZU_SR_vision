@@ -1,0 +1,3 @@
+./darknet detector train cfg/voc.data cfg/yolov3.cfg darknet53.conv.74 -gpu 0 | tee results/2008_result.log
+./darknet detector test cfg/voc.data cfg/yolov3.cfg backup/yolov3_13500.weights -thresh 0.1 /home/srobot/桌面/YOLO_hand/temp/101574.png -gpu 0
+更改权重存储时机在src/detector.c的save_weights
